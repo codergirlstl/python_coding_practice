@@ -1,19 +1,14 @@
-season = "Fall"
+def substring_check(myseason, yourseason):
+    season1 = str(myseason)
+    season2 = str(yourseason)
+    if season1 in season2:
+        answer = "True"
+    if season1 not in season2:
+        answer = "False"
+    return answer
 
-print(season)
+myseason = ("My favorite season is Summer.")
 
-for x in range(len(season)):
-    print(season[x])
+yourseason = input("What is your favorite season")
 
-subseason = "all"
-if subseason in season:
-    print("That is a substring of Fall")
-if subseason not in season:
-    print("That is not a substring of Fall")
-
-user_answer = input("What is your favorite season?")
-
-if user_answer in season:
-    print("That is a substring of Fall")
-if user_answer not in season:
-    print("That is not a substring of Fall")
+substring_check(myseason, yourseason)
